@@ -1,0 +1,737 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Desa Sagulubbeg - Pemerintah Desa Sagulubbeg
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10, 71, 76, 0.85) 0%, rgba(5, 100, 87, 0.85) 100%);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+  </style>
+ </head>
+ <body class="bg-gray-50">
+  <!-- Header/Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center">
+     <img alt="Foto pantai Mentawai dengan ombak besar dan langit cerah, pasir putih dan pohon kelapa di tepi pantai" class="h-12 w-12 mr-3 rounded-full object-cover" height="80" src="https://storage.googleapis.com/a1aa/image/acf8f03f-e822-4223-8f5d-3f01eccc4a25.jpg" width="80"/>
+     <div>
+      <h1 class="text-xl font-bold text-gray-800">
+       Desa Sagulubbeg
+      </h1>
+      <p class="text-xs text-gray-600">
+       Kabupaten Kepulauan Mentawai
+      </p>
+     </div>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+     <a class="text-green-700 font-medium hover:text-green-800" href="#beranda">
+      Beranda
+     </a>
+     <a class="text-gray-600 hover:text-green-700" href="#profil">
+      Profil Desa
+     </a>
+     <div class="dropdown relative">
+      <button class="text-gray-600 hover:text-green-700 flex items-center">
+       Pemerintahan
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+      <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-1 w-48">
+       <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#pemerintahan">
+        Struktur Organisasi
+       </a>
+       <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#badan-permades">
+        Badan Permades
+       </a>
+       <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#bpd">
+        BPD
+       </a>
+      </div>
+     </div>
+     <a class="text-gray-600 hover:text-green-700" href="#pelayanan">
+      Pelayanan
+     </a>
+     <a class="text-gray-600 hover:text-green-700" href="#berita">
+      Berita &amp; Pengumuman
+     </a>
+     <a class="text-gray-600 hover:text-green-700" href="#galeri">
+      Galeri
+     </a>
+     <a class="text-gray-600 hover:text-green-700" href="#kontak">
+      Kontak
+     </a>
+    </nav>
+    <button class="md:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
+     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <nav class="md:hidden bg-white shadow-lg hidden" id="mobile-menu">
+    <a class="block px-4 py-3 border-b border-gray-200 text-green-700 font-medium hover:bg-gray-100" href="#beranda">
+     Beranda
+    </a>
+    <a class="block px-4 py-3 border-b border-gray-200 text-gray-600 hover:text-green-700 hover:bg-gray-100" href="#profil">
+     Profil Desa
+    </a>
+    <div class="border-b border-gray-200">
+     <button class="w-full flex justify-between items-center px-4 py-3 text-gray-600 hover:text-green-700 focus:outline-none" id="mobile-dropdown-button">
+      Pemerintahan
+      <svg class="h-4 w-4 transform transition-transform" fill="none" id="mobile-dropdown-icon" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </button>
+     <div class="hidden bg-gray-50" id="mobile-dropdown-menu">
+      <a class="block px-6 py-2 text-gray-700 hover:bg-gray-100" href="#pemerintahan">
+       Struktur Organisasi
+      </a>
+      <a class="block px-6 py-2 text-gray-700 hover:bg-gray-100" href="#badan-permades">
+       Badan Permades
+      </a>
+      <a class="block px-6 py-2 text-gray-700 hover:bg-gray-100" href="#bpd">
+       BPD
+      </a>
+     </div>
+    </div>
+    <a class="block px-4 py-3 border-b border-gray-200 text-gray-600 hover:text-green-700 hover:bg-gray-100" href="#pelayanan">
+     Pelayanan
+    </a>
+    <a class="block px-4 py-3 border-b border-gray-200 text-gray-600 hover:text-green-700 hover:bg-gray-100" href="#berita">
+     Berita &amp; Pengumuman
+    </a>
+    <a class="block px-4 py-3 border-b border-gray-200 text-gray-600 hover:text-green-700 hover:bg-gray-100" href="#galeri">
+     Galeri
+    </a>
+    <a class="block px-4 py-3 text-gray-600 hover:text-green-700 hover:bg-gray-100" href="#kontak">
+     Kontak
+    </a>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20" id="beranda">
+   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 mb-10 md:mb-0">
+     <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      Selamat Datang di Website Resmi
+      <span class="text-yellow-300">
+       Desa Sagulubbeg
+      </span>
+     </h1>
+     <p class="text-lg mb-6">
+      Desa yang maju, mandiri, dan berdaya saing melalui partisipasi aktif seluruh masyarakat.
+     </p>
+     <div class="flex space-x-4">
+      <a class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300" href="#pelayanan">
+       Pelayanan Publik
+      </a>
+      <a class="border-2 border-white hover:bg-white hover:text-green-800 font-semibold px-6 py-3 rounded-lg transition duration-300" href="#profil">
+       Tentang Kami
+      </a>
+     </div>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+     <img alt="Pemukiman adat di Desa Sagulubbeg dengan panorama alam pegunungan hijau yang indah dan pantai Mentawai dengan ombak besar dan langit cerah" class="rounded-lg shadow-2xl object-cover max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/df4dc563-77d7-4387-adae-c2f284cebc27.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <!-- Stats Section -->
+  <section class="bg-white py-12">
+   <div class="container mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+     <div class="p-4">
+      <img alt="Ikon penduduk dengan siluet orang banyak berwarna hijau" class="mx-auto mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/e5edfbc0-c059-4744-1075-25676a5dbda3.jpg" width="80"/>
+      <div class="text-4xl font-bold text-green-700 mb-2">
+       3.248
+      </div>
+      <div class="text-gray-600">
+       Jiwa Penduduk
+      </div>
+     </div>
+     <div class="p-4">
+      <img alt="Ikon rumah dan komunitas berwarna hijau" class="mx-auto mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/e79263de-6c51-499a-91ed-49f6ea7ba776.jpg" width="80"/>
+      <div class="text-4xl font-bold text-green-700 mb-2">
+       15
+      </div>
+      <div class="text-gray-600">
+       RT
+      </div>
+     </div>
+     <div class="p-4">
+      <img alt="Ikon keluarga dengan dua orang dewasa dan dua anak berwarna hijau" class="mx-auto mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/07f7c8f0-23cb-4943-93f2-332ea72454e7.jpg" width="80"/>
+      <div class="text-4xl font-bold text-green-700 mb-2">
+       85%
+      </div>
+      <div class="text-gray-600">
+       Keluarga Sejahtera
+      </div>
+     </div>
+     <div class="p-4">
+      <img alt="Ikon tangan memegang daun sebagai simbol desa mandiri berwarna hijau" class="mx-auto mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/7ab047f1-76e3-4790-6c2c-c67ec37f5d82.jpg" width="80"/>
+      <div class="text-4xl font-bold text-green-700 mb-2">
+       2023
+      </div>
+      <div class="text-gray-600">
+       Desa Mandiri
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Profil Desa Section -->
+  <section class="py-16 bg-gray-50" id="profil">
+   <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+     <h2 class="text-3xl font-bold text-gray-800 mb-3">
+      Profil Desa Sagulubbeg
+     </h2>
+     <div class="w-20 h-1 bg-green-700 mx-auto">
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-10">
+     <div class="md:w-1/2">
+      <img alt="Pemandangan panorama Desa Sagulubbeg dengan sawah terasering tradisional dan rumah adat Mentawai di latar belakang" class="rounded-lg shadow-lg w-full object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/59dadab3-7dc5-45ce-238d-c5174a5958e5.jpg" width="600"/>
+     </div>
+     <div class="md:w-1/2">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+       Desa Sagulubbeg
+      </h3>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+       Desa Sagulubbe merupakan salah satu desa di Kecamatan Siberut Barat Daya, Kabupaten Kepulauan Mentawai, Provinsi Sumatera Barat. Desa ini terletak di Pantai Barat yang ombaknya indah dan juga mematikan, udara sejuk dan panorama alam yang indah.
+      </p>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+       Sebagian besar masyarakat Desa Sagulubbeg bermata pencaharian sebagai petani dengan komoditas utama Kelapa, dan juga beternak. Desa ini memiliki adat istiadat yang kuat dengan warisan budaya yang tetap dilestarikan.
+      </p>
+      <div class="mt-6">
+       <a class="inline-flex items-center text-green-700 font-medium hover:text-green-800" href="#profil-lengkap">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Pemerintahan Desa Section -->
+  <section class="py-16 bg-white" id="pemerintahan">
+   <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+     <h2 class="text-3xl font-bold text-gray-800 mb-3">
+      Struktur Pemerintahan Desa
+     </h2>
+     <p class="text-gray-600 max-w-2xl mx-auto">
+      Pemerintah Desa Sagulubbeg yang melayani dengan integritas dan profesionalisme
+     </p>
+     <div class="w-20 h-1 bg-green-700 mx-auto">
+     </div>
+    </div>
+    <div class="flex flex-col items-center">
+     <div class="relative mb-16">
+      <div class="bg-green-700 text-white text-center p-6 rounded-full shadow-xl w-52 h-52 mx-auto flex flex-col justify-center items-center">
+       <h3 class="font-bold text-xl mb-1">
+        KEPALA DESA
+       </h3>
+       <p class="text-sm">
+        SAGULUBBE
+       </p>
+       <div class="mt-3 text-lg font-medium">
+        FARLIN BOTDDOT
+       </div>
+      </div>
+     </div>
+     <div class="w-full md:w-3/4">
+      <div class="flex justify-between mb-8 flex-wrap gap-6">
+       <div class="text-center">
+        <div class="bg-green-600 text-white p-4 rounded-lg shadow-md w-36 h-36 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1">
+          SEKDES
+         </h4>
+         <div class="text-sm font-medium">
+          FARLIN BODDOT
+         </div>
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="bg-green-600 text-white p-4 rounded-lg shadow-md w-36 h-36 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1">
+          KAUR UMUM
+         </h4>
+         <div class="text-sm font-medium">
+          JULIANUS
+         </div>
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="bg-green-600 text-white p-4 rounded-lg shadow-md w-36 h-36 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1">
+          KAUR KEUANGAN
+         </h4>
+         <div class="text-sm font-medium">
+          JONAS SAKERU
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="w-full md:w-3/4 mb-8">
+      <div class="flex justify-around flex-wrap gap-6">
+       <div class="text-center">
+        <div class="bg-green-500 text-white p-3 rounded-lg shadow-md w-32 h-32 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1 text-sm">
+          KAUR PERENCANAAN
+         </h4>
+         <div class="text-xs font-medium">
+          NORBERTUS SEREMING
+         </div>
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="bg-green-500 text-white p-3 rounded-lg shadow-md w-32 h-32 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1 text-sm">
+          KASI PEMERINTAHAN
+         </h4>
+         <div class="text-xs font-medium">
+          MATIAS IDDAP
+         </div>
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="bg-green-500 text-white p-3 rounded-lg shadow-md w-32 h-32 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1 text-sm">
+          KASI KESEJAHTERAAN
+         </h4>
+         <div class="text-xs font-medium">
+          SUHARDI MANURUNG
+         </div>
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="bg-green-500 text-white p-3 rounded-lg shadow-md w-32 h-32 mx-auto flex flex-col justify-center items-center">
+         <h4 class="font-bold mb-1 text-sm">
+          KASI PELAYANAN
+         </h4>
+         <div class="text-xs font-medium">
+          FITRIANI NASUTION
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <a class="mt-6 inline-flex items-center text-green-700 font-medium hover:text-green-800" href="#struktur-lengkap">
+      Lihat Struktur Lengkap
+      <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Pelayanan Section -->
+  <section class="py-16 bg-gray-50" id="pelayanan">
+   <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+     <h2 class="text-3xl font-bold text-gray-800 mb-3">
+      Pelayanan Publik
+     </h2>
+     <p class="text-gray-600 max-w-2xl mx-auto">
+      Berbagai layanan administrasi yang dapat dimanfaatkan oleh masyarakat
+     </p>
+     <div class="w-20 h-1 bg-green-700 mx-auto">
+     </div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+      <img alt="Ikon surat keterangan domisili berwarna hijau" class="mb-4" height="56" src="https://storage.googleapis.com/a1aa/image/ef9b7d82-d71f-46f0-5028-091a903164cb.jpg" width="56"/>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">
+       Surat Keterangan Domisili
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Pengajuan surat keterangan domisili untuk keperluan administrasi
+      </p>
+      <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+       Ajukan Sekarang
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+      <img alt="Ikon kartu identitas penduduk berwarna hijau" class="mb-4" height="56" src="https://storage.googleapis.com/a1aa/image/ffe12633-89aa-4f02-401e-571724f5891f.jpg" width="56"/>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">
+       Pembuatan KTP
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Layanan pembuatan dan perpanjangan Kartu Tanda Penduduk
+      </p>
+      <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+       Ajukan Sekarang
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+      <img alt="Ikon kartu keluarga berwarna hijau" class="mb-4" height="56" src="https://storage.googleapis.com/a1aa/image/b60dc2e6-fa8a-4579-1480-05b22f71c257.jpg" width="56"/>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">
+       Pembuatan Kartu Keluarga
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Layanan pembuatan dan pembaruan Kartu Keluarga
+      </p>
+      <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+       Ajukan Sekarang
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+      <img alt="Ikon surat nikah berwarna hijau" class="mb-4" height="56" src="https://storage.googleapis.com/a1aa/image/5e56a6f6-7cc0-4e83-9dd7-c12a675671a8.jpg" width="56"/>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">
+       Pengurusan Surat Nikah
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Layanan pengurusan surat nikah dan administrasi terkait
+      </p>
+      <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+       Ajukan Sekarang
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+      <img alt="Ikon surat kematian berwarna hijau" class="mb-4" height="56" src="https://storage.googleapis.com/a1aa/image/cd560ecf-0933-4b26-07ef-1082ec5aa541.jpg" width="56"/>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">
+       Pengurusan Surat Kematian
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Layanan pengurusan surat kematian dan administrasi terkait
+      </p>
+      <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+       Ajukan Sekarang
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+      <img alt="Ikon surat pindah berwarna hijau" class="mb-4" height="56" src="https://storage.googleapis.com/a1aa/image/22974c71-5bce-4537-a0e0-7c741b0e94da.jpg" width="56"/>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">
+       Pengurusan Surat Pindah
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Layanan pengurusan surat pindah penduduk
+      </p>
+      <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+       Ajukan Sekarang
+       <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Berita & Pengumuman Section -->
+  <section class="py-16 bg-white" id="berita">
+   <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+     <h2 class="text-3xl font-bold text-gray-800 mb-3">
+      Berita &amp; Pengumuman
+     </h2>
+     <p class="text-gray-600 max-w-2xl mx-auto">
+      Informasi terbaru dan pengumuman penting dari Desa Sagulubbeg
+     </p>
+     <div class="w-20 h-1 bg-green-700 mx-auto">
+     </div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto festival budaya Mentawai dengan tarian tradisional dan pakaian adat berwarna cerah" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/88dd9280-7f33-4da6-6cf5-b494a6d8cd60.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Festival Budaya Mentawai 2024
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Desa Sagulubbeg sukses menggelar festival budaya tahunan yang menampilkan tarian dan musik tradisional.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto pembangunan jalan desa di Mentawai dengan alat berat dan pekerja" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/20c2ef41-4b78-403a-d83a-8c5129781680.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Pembangunan Jalan Desa
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Pemerintah Desa Sagulubbeg memulai proyek pembangunan jalan utama untuk meningkatkan aksesibilitas.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto pelatihan pertanian di Desa Sagulubbeg dengan petani belajar teknik baru" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/34f9f28a-d50a-466a-9d05-5d8e11e5f534.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Pelatihan Pertanian Modern
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Masyarakat desa mengikuti pelatihan pertanian modern untuk meningkatkan hasil panen kelapa dan tanaman lainnya.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto kegiatan gotong royong warga Desa Sagulubbeg membersihkan lingkungan sekitar" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/18f7ac90-3125-48fb-6efa-567b1d8af97a.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Kegiatan Gotong Royong
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Warga Desa Sagulubbeg melaksanakan gotong royong membersihkan lingkungan desa demi kenyamanan bersama.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto papan pengumuman desa dengan tulisan pengumuman penting di Desa Sagulubbeg" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/6a985c76-7b10-4261-2fe6-5dcee98b6b07.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Pengumuman Penting Desa
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Pemerintah Desa mengumumkan jadwal vaksinasi dan kegiatan sosial lainnya untuk masyarakat.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto kegiatan olahraga bersama warga Desa Sagulubbeg di lapangan terbuka" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/5e9a6bfe-e903-40f8-786e-f7c962f5692c.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Kegiatan Olahraga Desa
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Warga desa mengadakan turnamen sepak bola antar RT untuk mempererat tali persaudaraan.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto pelayanan kesehatan di desa dengan tenaga medis memberikan vaksinasi" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/3451d58b-68f2-46f2-1b10-5f04ac967aaa.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Pelayanan Kesehatan Gratis
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Pemerintah desa menyediakan pelayanan kesehatan gratis untuk warga yang membutuhkan.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+     <article class="bg-gray-50 rounded-lg shadow-md overflow-hidden news-card transition-transform duration-300">
+      <img alt="Foto pelatihan kerajinan tangan warga desa dengan bahan alami Mentawai" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/479b2518-7efb-489a-c5ac-bbf93fda2e27.jpg" width="600"/>
+      <div class="p-6">
+       <h3 class="text-xl font-semibold mb-2 text-gray-800">
+        Pelatihan Kerajinan Tangan
+       </h3>
+       <p class="text-gray-600 mb-4">
+        Warga desa mengikuti pelatihan membuat kerajinan tangan dari bahan alami khas Mentawai.
+       </p>
+       <a class="text-green-700 font-medium hover:text-green-800 flex items-center" href="#">
+        Baca Selengkapnya
+        <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </a>
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <!-- Galeri Section -->
+  <section class="py-16 bg-gray-50" id="galeri">
+   <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+     <h2 class="text-3xl font-bold text-gray-800 mb-3">
+      Galeri Foto
+     </h2>
+     <p class="text-gray-600 max-w-2xl mx-auto">
+      Kumpulan foto keindahan dan kegiatan di Desa Sagulubbeg
+     </p>
+     <div class="w-20 h-1 bg-green-700 mx-auto">
+     </div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+     <img alt="Foto pantai Mentawai dengan ombak besar dan langit biru cerah, pasir putih dan pohon kelapa" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/148192f0-fdb7-4cef-ce22-c3644b416412.jpg" width="400"/>
+     <img alt="Foto pantai Mentawai dengan batu karang dan ombak yang menghantam, langit cerah" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/2e0fcf5f-d7bd-445a-f735-02c56e1790f6.jpg" width="400"/>
+     <img alt="Foto pantai Mentawai dengan perahu nelayan tradisional di tepi pantai" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/f209e35a-e88b-4c64-a4f6-4b0e5868701d.jpg" width="400"/>
+     <img alt="Foto matahari terbenam di pantai Mentawai dengan langit oranye dan siluet pohon kelapa" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/8b8951a7-5083-4244-6a69-6ebcb50e3833.jpg" width="400"/>
+     <img alt="Foto ombak besar di pantai Mentawai dengan langit biru dan awan putih" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/5995845d-39b3-46c9-a298-6aed3992eacd.jpg" width="400"/>
+     <img alt="Foto pasir putih dan air laut jernih di pantai Mentawai dengan latar belakang pegunungan hijau" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/0272256a-248b-46c7-6b66-e06c7988428b.jpg" width="400"/>
+     <img alt="Foto perahu tradisional nelayan di pantai Mentawai dengan langit cerah" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/c27918be-6098-4c88-19cc-7ca2c083ed8c.jpg" width="400"/>
+     <img alt="Foto pantai Mentawai dengan ombak besar dan batu karang di tepi pantai" class="rounded-lg shadow-md object-cover w-full h-48" height="300" src="https://storage.googleapis.com/a1aa/image/3c2fab13-ac1a-4a72-3af8-87603f2390b0.jpg" width="400"/>
+    </div>
+   </div>
+  </section>
+  <!-- Kontak Section -->
+  <section class="py-16 bg-white" id="kontak">
+   <div class="container mx-auto px-4 max-w-3xl">
+    <div class="text-center mb-12">
+     <h2 class="text-3xl font-bold text-gray-800 mb-3">
+      Kontak Kami
+     </h2>
+     <p class="text-gray-600 max-w-xl mx-auto">
+      Hubungi Pemerintah Desa Sagulubbeg untuk informasi lebih lanjut
+     </p>
+     <div class="w-20 h-1 bg-green-700 mx-auto">
+     </div>
+    </div>
+    <form class="bg-gray-50 p-8 rounded-lg shadow-md space-y-6">
+     <div>
+      <label class="block text-gray-700 font-medium mb-2" for="name">
+       Nama
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-700" id="name" name="name" placeholder="Nama lengkap" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-700" id="email" name="email" placeholder="email@example.com" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-medium mb-2" for="message">
+       Pesan
+      </label>
+      <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-700" id="message" name="message" placeholder="Tulis pesan Anda di sini..." required="" rows="4"></textarea>
+     </div>
+     <button class="bg-green-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-800 transition duration-300 w-full md:w-auto" type="submit">
+      Kirim Pesan
+     </button>
+    </form>
+    <div class="mt-12 text-center text-gray-600 space-y-2">
+     <p>
+      <i class="fas fa-map-marker-alt mr-2 text-green-700">
+      </i>
+      Jl. Raya Mentawai No.123, Desa Sagulubbeg, Kepulauan Mentawai
+     </p>
+     <p>
+      <i class="fas fa-phone mr-2 text-green-700">
+      </i>
+      +62 812-3456-7890
+     </p>
+     <p>
+      <i class="fas fa-envelope mr-2 text-green-700">
+      </i>
+      info@sagulubbeg.desa.id
+     </p>
+    </div>
+   </div>
+  </section>
+  <script>
+   // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownButton = document.getElementById('mobile-dropdown-button');
+        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+        const mobileDropdownIcon = document.getElementById('mobile-dropdown-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileDropdownButton.addEventListener('click', () => {
+            mobileDropdownMenu.classList.toggle('hidden');
+            mobileDropdownIcon.classList.toggle('rotate-180');
+        });
+  </script>
+ </body>
+</html>
